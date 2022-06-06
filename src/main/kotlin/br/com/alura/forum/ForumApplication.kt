@@ -1,11 +1,11 @@
-package br.com.alura.demo
+package br.com.alura.forum
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class DemoApplication
+class ForumApplication
 
 fun main(args: Array<String>) {
-	runApplication<DemoApplication>(*args)
+	runApplication<ForumApplication>(*args)
 }

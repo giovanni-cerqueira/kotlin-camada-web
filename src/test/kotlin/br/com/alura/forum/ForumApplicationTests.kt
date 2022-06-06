@@ -1,10 +1,10 @@
-package br.com.alura.demo
+package br.com.alura.forum
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class DemoApplicationTests {
+class ForumApplicationTests {
 
 	@Test
 	fun contextLoads() {
