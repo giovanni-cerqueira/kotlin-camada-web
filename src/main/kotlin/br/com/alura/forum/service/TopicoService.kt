@@ -66,4 +66,10 @@ class TopicoService(
     fun listar(): List<Topico> {
         return topicos
     }
+
+    fun buscarPorId(id: Long): Topico {
+        return topicos.stream().filter({
+            t -> t.id == id
+        }).findFirst().get()
+    }
 }
