@@ -19,4 +19,7 @@ class TopicoController(
     fun listar(): List<Topico> {
         return service.listar()
     }
+
+    @GetMapping
+
 }
