@@ -20,6 +20,5 @@ class TopicoController(
         return service.listar()
     }
 
-    @GetMapping
 
 }

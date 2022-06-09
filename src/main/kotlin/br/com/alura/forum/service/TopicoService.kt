@@ -26,7 +26,7 @@ class TopicoService(
                 nome = "Giovanni Cerqueira",
                 email = "giovanni@email.com"
             )
-        ),
+        )
 
         val topico2 = Topico(
             id = 1,
@@ -42,7 +42,7 @@ class TopicoService(
                 nome = "Giovanni Cerqueira",
                 email = "giovanni@email.com"
             )
-        ),
+        )
 
         val topico3 = Topico(
             id = 1,
@@ -64,6 +64,6 @@ class TopicoService(
     }
 
     fun listar(): List<Topico> {
-
+        return topicos
     }
 }
