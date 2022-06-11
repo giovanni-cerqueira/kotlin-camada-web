@@ -33,4 +33,9 @@ class TopicoController(
         service.atualizar(form)
     }
 
+    @DeleteMapping("/{id}")
+    fun deletar(@PathVariable id: Long){
+        service.deletar(id)
+    }
+
 }
