@@ -1,4 +1,4 @@
-package br.com.alura.forum.controller
+package br.com.alura.forum.dto.controller
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping

@@ -1,4 +1,4 @@
-package br.com.alura.forum.controller
+package br.com.alura.forum.dto.controller
 
 import br.com.alura.forum.dto.AtualizacaoTopicoForm
 import br.com.alura.forum.dto.NovoTopicoForm
