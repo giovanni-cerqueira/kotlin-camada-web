@@ -1,10 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.7.0"
+	id("org.springframework.boot") version "2.6.2"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	kotlin("jvm") version "1.6.21"
-	kotlin("plugin.spring") version "1.6.21"
+	kotlin("jvm") version "1.6.10"
+	kotlin("plugin.spring") version "1.6.10"
+	kotlin("plugin.jpa") version "1.6.10"
 }
 
 group = "br.com.alura"
@@ -16,16 +17,17 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("org.springframework.boot:spring-boot-starter-validation:2.6.3")
+
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.7.0")
-	implementation("mysql:mysql-connector-java:8.0.29")
+	implementation("org.flywaydb:flyway-core:7.7.0")
 	runtimeOnly("mysql:mysql-connector-java")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 
 }
 
