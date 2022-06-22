@@ -9,9 +9,9 @@ data class Topico(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null,
     @Column
-    val titulo: String,
+    var titulo: String,
     @Column
-    val mensagem: String,
+    var mensagem: String,
     @Column
     val dataCriacao: LocalDateTime = LocalDateTime.now(),
     @Column
