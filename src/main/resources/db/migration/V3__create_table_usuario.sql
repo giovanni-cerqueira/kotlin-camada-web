@@ -1,7 +1,7 @@
 
-create table if not exists curso(
+create table if not exists usuario(
     id bigint not null,
     nome varchar (50),
-    categoria varchar (50),
+    email varchar (50),
     primary key (id)
 );
