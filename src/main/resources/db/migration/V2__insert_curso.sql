@@ -1,0 +1,1 @@
+insert into curso(id, nome, categoria) values (1, 'Kotlin', 'Programação');
