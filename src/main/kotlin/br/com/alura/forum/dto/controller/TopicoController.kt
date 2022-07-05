@@ -23,7 +23,7 @@ class TopicoController(
     }
 
     @GetMapping("/{id}")
-    fun buscarPorI (@PathVariable id: Long): TopicoView {
+    fun buscarPorId(@PathVariable id: Long): TopicoView {
         return service.buscarPorId(id)
     }
 
@@ -48,7 +48,7 @@ class TopicoController(
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Transactional
-    fun deletar(@PathVariable id: Long){
+    fun deletar(@PathVariable id: Long) {
         service.deletar(id)
     }
 
