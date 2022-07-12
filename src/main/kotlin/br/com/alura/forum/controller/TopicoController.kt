@@ -4,6 +4,7 @@ import br.com.alura.forum.dto.AtualizacaoTopicoForm
 import br.com.alura.forum.dto.NovoTopicoForm
 import br.com.alura.forum.dto.TopicoPorCategoriaDto
 import br.com.alura.forum.dto.TopicoView
+import br.com.alura.forum.model.Topico
 import br.com.alura.forum.service.TopicoService
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.cache.annotation.Cacheable
@@ -68,6 +69,11 @@ class TopicoController(private val service: TopicoService) {
     @GetMapping("/relatorio")
     fun relatorio(): List<TopicoPorCategoriaDto> {
         return service.relatorio()
+    }
+
+    @GetMapping("/naorespondidas")
+    fun answer(): List<Topico> {
+        return service.answer()
     }
 
 }

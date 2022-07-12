@@ -7,6 +7,7 @@ import br.com.alura.forum.dto.TopicoView
 import br.com.alura.forum.exception.NotFoundException
 import br.com.alura.forum.mapper.TopicoFormMapper
 import br.com.alura.forum.mapper.TopicoViewMapper
+import br.com.alura.forum.model.Topico
 import br.com.alura.forum.repository.TopicoRepository
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
@@ -63,6 +64,10 @@ class TopicoService(
 
     fun relatorio(): List<TopicoPorCategoriaDto> {
         return repository.relatorio()
+    }
+
+    fun answer(): List<Topico> {
+        return repository.topicosNaoRespondidos()
     }
 
 }
