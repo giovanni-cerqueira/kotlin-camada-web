@@ -2,7 +2,7 @@ package br.com.alura.forum.model
 
 import javax.persistence.*
 
-@Entity(name = "usuario")
+@Entity
 data class Usuario(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

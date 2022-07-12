@@ -3,7 +3,7 @@ package br.com.alura.forum.model
 import java.time.LocalDateTime
 import javax.persistence.*
 
-@Entity(name = "resposta")
+@Entity
 data class Resposta(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

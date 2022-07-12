@@ -1,7 +1,8 @@
-package br.com.alura.forum.dto.controller
+package br.com.alura.forum.controller
 
 import br.com.alura.forum.dto.AtualizacaoTopicoForm
 import br.com.alura.forum.dto.NovoTopicoForm
+import br.com.alura.forum.dto.TopicoPorCategoriaDto
 import br.com.alura.forum.dto.TopicoView
 import br.com.alura.forum.service.TopicoService
 import org.springframework.cache.annotation.CacheEvict
@@ -16,21 +17,19 @@ import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.util.UriComponentsBuilder
 import javax.validation.Valid
+import javax.validation.constraints.NotNull
 
 @RestController
 @RequestMapping("/topicos")
-class TopicoController(
-    private val service: TopicoService
-) {
+class TopicoController(private val service: TopicoService) {
 
     @GetMapping
     @Cacheable("topicos")
     fun listar(
         @RequestParam(required = false) nomeCurso: String?,
-        @PageableDefault(size = 5, sort = ["dataCriacao"], direction = Sort.Direction.DESC)
-        pageable: Pageable,
+        @PageableDefault(size = 5, sort = ["dataCriacao"], direction = Sort.Direction.DESC) paginacao: Pageable
     ): Page<TopicoView> {
-        return service.listar(nomeCurso, pageable)
+        return service.listar(nomeCurso, paginacao)
     }
 
     @GetMapping("/{id}")
@@ -64,6 +63,11 @@ class TopicoController(
     @CacheEvict(value = ["topicos"], allEntries = true)
     fun deletar(@PathVariable id: Long) {
         service.deletar(id)
+    }
+
+    @GetMapping("/relatorio")
+    fun relatorio(): List<TopicoPorCategoriaDto> {
+        return service.relatorio()
     }
 
 }
