@@ -15,6 +15,9 @@ spring:
     console:
       enabled: true
 
+jwt:
+  secret: secreto
+
 #spring:
 #  datasource:
 #    driverClassName: com.mysql.cj.jdbc.Driver
