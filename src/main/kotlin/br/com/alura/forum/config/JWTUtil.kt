@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.stereotype.Component
 import java.util.*
+import java.lang.IllegalArgumentException
 
 @Component
 class JWTUtil {
 
-    private val expiration: Long = 60000
+    private val expiration : Long = 6000000
 
     @Value("\${jwt.secret}")
     private lateinit var secret: String
