@@ -33,8 +33,9 @@ class SecurityConfiguration(
         authenticated()?.
         and()
         http?.addFilterBefore(JWTLoginFilter(authManager = authenticationManager(), jwtUtil = jwtUtil), UsernamePasswordAuthenticationFilter().javaClass)
-        http?.addFilterBefore(JWTAuthenticationFilter(jwtUtil = jwtUtil), OncePerRequestFilter::class.java)?.
-        sessionManagement()?.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        http?.addFilterBefore(JWTAuthenticationFilter(jwtUtil = jwtUtil), UsernamePasswordAuthenticationFilter().javaClass)?.
+        sessionManagement()?.sessionCreationPolicy(SessionCreationPolicy.STATELESS)?.
+        and()?.csrf()?.disable()
     }
 
     @Bean
