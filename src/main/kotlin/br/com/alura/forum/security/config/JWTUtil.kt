@@ -1,4 +1,4 @@
-package br.com.alura.forum.config
+package br.com.alura.forum.security.config
 
 import br.com.alura.forum.service.UsuarioService
 import io.jsonwebtoken.Jwts

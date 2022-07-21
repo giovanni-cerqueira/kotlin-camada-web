@@ -1,6 +1,6 @@
 package br.com.alura.forum.security
 
-import br.com.alura.forum.config.JWTUtil
+import br.com.alura.forum.security.config.JWTUtil
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.filter.OncePerRequestFilter
 import javax.servlet.FilterChain

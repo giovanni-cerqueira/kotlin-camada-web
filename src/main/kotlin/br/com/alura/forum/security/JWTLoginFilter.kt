@@ -1,6 +1,6 @@
 package br.com.alura.forum.security
 
-import br.com.alura.forum.config.JWTUtil
+import br.com.alura.forum.security.config.JWTUtil
 import br.com.alura.forum.model.Credentials
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.security.authentication.AuthenticationManager
