@@ -33,6 +33,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-cache")
 	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("io.jsonwebtoken:jjwt:0.9.1")
+	testImplementation("io.mockk:mockk:1.12.2")
+	testImplementation("org.assertj:assertj-core:3.22.0")
 
 
 }
