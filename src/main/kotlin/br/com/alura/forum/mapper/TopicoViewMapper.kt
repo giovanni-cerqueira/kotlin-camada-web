@@ -13,7 +13,8 @@ class TopicoViewMapper: Mapper<Topico, TopicoView> {
             titulo = topico.titulo,
             mensagem = topico.mensagem,
             status = topico.status,
-            dataCriacao = LocalDateTime.now()
+            dataCriacao = topico.dataCriacao,
+            dataAlteracao = topico.dataAlteracao
         )
     }
 }
