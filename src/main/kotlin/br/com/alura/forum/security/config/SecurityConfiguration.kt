@@ -13,7 +13,6 @@ import org.springframework.security.config.http.SessionCreationPolicy
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
-import org.springframework.web.filter.OncePerRequestFilter
 
 @Configuration
 @EnableWebSecurity
@@ -27,6 +26,9 @@ class SecurityConfiguration(
     override fun configure(http: HttpSecurity?) {
         http?.
         authorizeRequests()?.
+        antMatchers(HttpMethod.POST,"/login")?.permitAll()?.
+        antMatchers(HttpMethod.GET, "/swagger-ui/*")?.permitAll()?.
+        antMatchers(HttpMethod.GET, "/v3/api-docs/**")?.permitAll()?.
         antMatchers("/topicos")?.hasAuthority("LEITURA_ESCRITA")?.
         antMatchers(HttpMethod.POST, "/login")?.permitAll()?.
         anyRequest()?.
