@@ -35,6 +35,9 @@ dependencies {
 	implementation("io.jsonwebtoken:jjwt:0.9.1")
 	testImplementation("io.mockk:mockk:1.12.2")
 	testImplementation("org.assertj:assertj-core:3.22.0")
+	implementation("org.testcontainers:testcontainers-bom:1.17.3")
+	testImplementation("org.testcontainers:mysql:1.17.3")
+	testImplementation("org.testcontainers:junit-jupiter:1.16.2")
 
 
 }
