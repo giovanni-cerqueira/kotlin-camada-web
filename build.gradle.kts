@@ -38,6 +38,7 @@ dependencies {
 	implementation("org.testcontainers:testcontainers-bom:1.17.3")
 	testImplementation("org.testcontainers:mysql:1.17.3")
 	testImplementation("org.testcontainers:junit-jupiter:1.16.2")
+	testImplementation("org.springframework.security:spring-security-test:5.6.2")
 
 
 }

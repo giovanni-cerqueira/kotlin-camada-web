@@ -15,9 +15,9 @@ spring:
 
 #  flyway:
 #    baselineOnMigrate: true
-#  flyway:
-#    locations:
-#      filesystem: db/migration
+  flyway:
+    locations:
+      filesystem: db/migration
 
 jwt:
   secret: secret

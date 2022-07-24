@@ -1,16 +1,23 @@
+spring:
+  #    autoconfigure:
+  #      exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
 
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/forum?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
 
-#spring:
-#  datasource:
-#    driverClassName: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/forumAlura?createDatabaseIfNotExist=true
-#    username: root
-#    password: root
-#  jpa:
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#    hibernate:
-#      ddl-auto: create
-#  flyway:
-#    locations:
-#      filesystem: db/migration
+  #  flyway:
+  #    baselineOnMigrate: true
+  flyway:
+    locations:
+      filesystem: db/migration
 
+jwt:
+  secret: secret
